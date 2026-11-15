@@ -34,7 +34,7 @@
   }
   function api(path) {
     return fetch(C.SUPABASE_URL + '/rest/v1/' + path, {
-      headers: { apikey: C.SUPABASE_KEY, Authorization: 'Bearer ' + C.SUPABASE_KEY }
+      headers: { apikey: C.SUPABASE_KEY }
     }).then(function (r) {
       if (!r.ok) throw new Error('HTTP ' + r.status);
       return r.json();
